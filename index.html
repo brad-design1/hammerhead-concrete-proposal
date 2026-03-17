@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammerhead Concrete × AGE — Growth Partner Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate: #2D3640;
+            --slate-light: #4a5568;
+            --navy: #2B4257;
+            --navy-light: #3d6080;
+            --orange: #F97316;
+            --orange-dark: #ea580c;
+            --dark: #1a1f24;
+            --darker: #0f1317;
+            --light: #f8f9fa;
+            --gray: #8A8E91;
+            --silver: #B5B8BA;
+            --concrete: #D2CFC9;
+            --border: #2d3640;
+            --success: #4ade80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 19, 23, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-number {
+            font-size: 0.8rem;
+            color: var(--orange);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem; }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--silver);
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+
+        /* Hero */
+        #hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 6rem;
+            background: linear-gradient(180deg, rgba(15, 19, 23, 0.7) 0%, rgba(15, 19, 23, 0.95) 100%);
+        }
+
+        .hero-emoji {
+            font-size: 80px;
+            margin-bottom: 1.5rem;
+        }
+
+        #hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--light);
+        }
+
+        #hero .tagline {
+            font-size: 1.5rem;
+            color: var(--orange);
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        #hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .audio-intro {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid var(--orange);
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .audio-label {
+            font-size: 0.95rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .audio-intro audio {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(45, 54, 64, 0.3) 0%, rgba(43, 66, 87, 0.2) 100%);
+            border: 2px solid var(--slate);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box .big-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--light);
+        }
+
+        /* Problem Stats */
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(45, 54, 64, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .stat-card.problem {
+            border-color: #ef4444;
+        }
+
+        .stat-card.problem .number {
+            color: #ef4444;
+        }
+
+        /* Phase Cards */
+        .phase-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .phase-card {
+            background: linear-gradient(135deg, rgba(45, 54, 64, 0.2) 0%, rgba(43, 66, 87, 0.15) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+
+        .phase-card:hover {
+            border-color: var(--orange);
+        }
+
+        .phase-number {
+            font-size: 0.8rem;
+            color: var(--orange);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .phase-card .timeline {
+            font-size: 0.85rem;
+            color: var(--navy-light);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .phase-card ul {
+            list-style: none;
+        }
+
+        .phase-card li {
+            padding: 0.4rem 0;
+            color: var(--silver);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .phase-card li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Hero Feature */
+        .hero-feature {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(45, 54, 64, 0.2) 100%);
+            border: 2px solid var(--orange);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .hero-feature h3 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+        }
+
+        .hero-feature .example-quote {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .hero-feature .example-quote .line {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            color: var(--silver);
+            font-size: 0.9rem;
+        }
+
+        .hero-feature .example-quote .total {
+            border-top: 1px solid var(--border);
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            font-weight: bold;
+            color: var(--light);
+        }
+
+        /* Pricing */
+        .pricing-breakdown {
+            margin: 3rem 0;
+        }
+
+        .pricing-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-section h4 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-row .label {
+            color: var(--silver);
+        }
+
+        .pricing-row .value {
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .pricing-row .value.accent {
+            color: var(--orange);
+        }
+
+        .pricing-row .value.green {
+            color: var(--success);
+        }
+
+        /* ROI Box */
+        .roi-box {
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(45, 54, 64, 0.2) 100%);
+            border: 2px solid var(--success);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .roi-box .big {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        .roi-box .sub {
+            font-size: 1.3rem;
+            color: var(--light);
+        }
+
+        /* Timeline */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .timeline-card h4 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-card ul {
+            list-style: none;
+        }
+
+        .timeline-card li {
+            padding: 0.3rem 0;
+            color: var(--silver);
+            font-size: 0.9rem;
+        }
+
+        /* Metrics Table */
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .metrics-table th, .metrics-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .metrics-table th {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .metrics-table td {
+            color: var(--light);
+        }
+
+        .metrics-table .current {
+            color: #ef4444;
+        }
+
+        .metrics-table .target {
+            color: var(--success);
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(45, 54, 64, 0.2) 100%);
+            border-radius: 16px;
+            border: 1px solid var(--orange);
+        }
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+
+        .cta-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--light);
+            font-size: 1.1rem;
+        }
+
+        /* What We Need */
+        .checklist {
+            margin: 2rem 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .checklist-item .check {
+            font-size: 1.2rem;
+            color: var(--success);
+        }
+
+        .checklist-item p {
+            margin: 0;
+            color: var(--silver);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { gap: 1rem; }
+            section { padding: 4rem 1.5rem 3rem; }
+            .pricing-row { flex-direction: column; gap: 0.3rem; }
+            .metrics-table { font-size: 0.85rem; }
+            .metrics-table th, .metrics-table td { padding: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#solution">The Solution</a></li>
+            <li><a href="#investment">Investment</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#next">Next Steps</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-emoji">🦈</div>
+        <h1>Hammerhead Concrete</h1>
+        <p class="tagline">Growth Partner Proposal</p>
+        <p class="subtitle">For Dain Cox • March 2026</p>
+        
+        <div class="audio-intro">
+            <p class="audio-label">🎧 Listen to Brad's intro (90 sec)</p>
+            <audio controls>
+                <source src="intro-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <section id="problem">
+        <p class="section-number">01 — THE PROBLEM</p>
+        <h2>You're invisible to the people who need you.</h2>
+        
+        <p class="lead">You've got 10 years of experience, 12 happy customers, and zero complaints. But when someone in Brownwood searches "concrete contractor near me" — they don't find you.</p>
+
+        <div class="problem-stats">
+            <div class="stat-card problem">
+                <div class="number">0</div>
+                <div class="label">Google Reviews</div>
+            </div>
+            <div class="stat-card problem">
+                <div class="number">0</div>
+                <div class="label">Website Visits</div>
+            </div>
+            <div class="stat-card problem">
+                <div class="number">0</div>
+                <div class="label">Google Business Profile</div>
+            </div>
+            <div class="stat-card problem">
+                <div class="number">$0</div>
+                <div class="label">Marketing Budget</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p class="big-number">$2,000-4,000/month</p>
+            <p>The gap between 2-3 jobs/month and your target of 4-5 jobs/month</p>
+        </div>
+
+        <h3>The Good News</h3>
+        <p>Your competitors aren't sophisticated. Most are opaque about pricing, slow to respond, and have no online presence beyond a phone number. That's your opening.</p>
+        
+        <p><strong>Your "fair pricing" approach isn't a weakness — it's your unfair advantage.</strong> Most contractors hide their pricing because they're overcharging. You don't have to hide anything.</p>
+    </section>
+
+    <section id="solution">
+        <p class="section-number">02 — THE SOLUTION</p>
+        <h2>A complete digital presence in 30 days.</h2>
+
+        <p class="lead">Not just a website — a system that generates leads, builds trust, and fills your calendar.</p>
+
+        <div class="hero-feature">
+            <h3>🔨 The Hero Feature: Transparent Quote Calculator</h3>
+            <p>No other concrete contractor in Texas has this. Customers enter their project details and see an instant, itemized breakdown — just like you do when you estimate a job.</p>
+            
+            <div class="example-quote">
+                <div class="line"><span>Concrete (6.8 yards @ $160/yd)</span><span>$1,088</span></div>
+                <div class="line"><span>Rebar & reinforcement</span><span>$480</span></div>
+                <div class="line"><span>Gravel base</span><span>$240</span></div>
+                <div class="line"><span>Forms & lumber</span><span>$450</span></div>
+                <div class="line"><span>Labor (18 hrs @ $65/hr)</span><span>$1,170</span></div>
+                <div class="line"><span>Equipment</span><span>$170</span></div>
+                <div class="line"><span>Overhead</span><span>$700</span></div>
+                <div class="line total"><span>Estimated Total</span><span>$4,898</span></div>
+            </div>
+            
+            <p style="margin-bottom: 0;"><strong>Why this wins:</strong> Builds instant trust. Differentiates you from every competitor. Pre-qualifies leads. Positions you as the "fair" choice in a market full of overchargers.</p>
+        </div>
+
+        <div class="phase-grid">
+            <div class="phase-card">
+                <p class="phase-number">PHASE 1</p>
+                <h4>Foundation</h4>
+                <p class="timeline">Week 1-2</p>
+                <ul>
+                    <li>Google Business Profile (claimed, optimized, photos)</li>
+                    <li>Domain + professional website</li>
+                    <li>Mobile-first design with click-to-call</li>
+                    <li>Transparent quote calculator integration</li>
+                    <li>Review request system for 12 past customers</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <p class="phase-number">PHASE 2</p>
+                <h4>Visibility</h4>
+                <p class="timeline">Week 3-4</p>
+                <ul>
+                    <li>Local SEO for "concrete contractor Brownwood TX"</li>
+                    <li>Facebook page refresh with job photos</li>
+                    <li>Google Local Services Ads (pay per lead)</li>
+                    <li>Lead tracking dashboard</li>
+                    <li>First 3-5 Google reviews collected</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <p class="phase-number">PHASE 3</p>
+                <h4>Amplification</h4>
+                <p class="timeline">Month 2+</p>
+                <ul>
+                    <li>Facebook Ads (job photo carousels)</li>
+                    <li>Referral program with Watson Roofing</li>
+                    <li>Weekly content posts from completed jobs</li>
+                    <li>Automated review requests after each job</li>
+                    <li>Performance optimization based on data</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="investment">
+        <p class="section-number">03 — INVESTMENT</p>
+        <h2>Simple, transparent pricing. (Just like yours.)</h2>
+
+        <div class="pricing-breakdown">
+            <div class="pricing-section">
+                <h4>💰 Setup Fee (One-Time)</h4>
+                <div class="pricing-row">
+                    <span class="label">Complete Phase 1-2 build (GBP, website, AI quoter, SEO)</span>
+                    <span class="value accent">$2,500</span>
+                </div>
+            </div>
+
+            <div class="pricing-section">
+                <h4>📅 Monthly Retainer</h4>
+                <div class="pricing-row">
+                    <span class="label">Ongoing optimization, content, ad management</span>
+                    <span class="value">$400/mo</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Ad spend (Google + Facebook, your budget)</span>
+                    <span class="value">$300-500/mo</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Total monthly</span>
+                    <span class="value accent">$700-900/mo</span>
+                </div>
+            </div>
+
+            <div class="pricing-section">
+                <h4>🎯 Performance Bonus</h4>
+                <div class="pricing-row">
+                    <span class="label">For every job over 4/month</span>
+                    <span class="value accent">$100/job</span>
+                </div>
+                <p style="margin-top: 1rem; margin-bottom: 0; font-size: 0.9rem;">This aligns our incentives — I only win when you win.</p>
+            </div>
+        </div>
+
+        <div class="roi-box">
+            <p class="big">$48,000</p>
+            <p class="sub">Potential additional revenue per year</p>
+            <p style="margin-top: 1rem; margin-bottom: 0;">2 extra jobs/month × $2,000 average = $48K/year</p>
+        </div>
+
+        <h3>Alternative: Cash-Tight Start</h3>
+        <div class="pricing-section">
+            <div class="pricing-row">
+                <span class="label">Setup fee</span>
+                <span class="value">$0 (deferred)</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">Monthly retainer</span>
+                <span class="value">$600/mo</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">Revenue share on our leads</span>
+                <span class="value">10%</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <p class="section-number">04 — TIMELINE & METRICS</p>
+        <h2>Clear targets. Measurable progress.</h2>
+
+        <div class="timeline-grid">
+            <div class="timeline-card">
+                <h4>Week 1</h4>
+                <ul>
+                    <li>✓ GBP claimed and live</li>
+                    <li>✓ Domain secured</li>
+                    <li>✓ Website wireframes approved</li>
+                </ul>
+            </div>
+            <div class="timeline-card">
+                <h4>Week 2</h4>
+                <ul>
+                    <li>✓ Website + quote calculator live</li>
+                    <li>✓ Review requests sent to past customers</li>
+                    <li>✓ Facebook page refreshed</li>
+                </ul>
+            </div>
+            <div class="timeline-card">
+                <h4>Week 3-4</h4>
+                <ul>
+                    <li>✓ Local SEO optimized</li>
+                    <li>✓ First 3-5 reviews collected</li>
+                    <li>✓ Google LSA launched</li>
+                </ul>
+            </div>
+            <div class="timeline-card">
+                <h4>Month 2+</h4>
+                <ul>
+                    <li>✓ Facebook ads running</li>
+                    <li>✓ Referral program active</li>
+                    <li>✓ Performance optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Success Metrics</h3>
+        <table class="metrics-table">
+            <tr>
+                <th>Metric</th>
+                <th>Current</th>
+                <th>30-Day Target</th>
+                <th>90-Day Target</th>
+            </tr>
+            <tr>
+                <td>Jobs/month</td>
+                <td class="current">2-3</td>
+                <td>3-4</td>
+                <td class="target">4-5</td>
+            </tr>
+            <tr>
+                <td>Google reviews</td>
+                <td class="current">0</td>
+                <td>5+</td>
+                <td class="target">10+</td>
+            </tr>
+            <tr>
+                <td>Website visits/week</td>
+                <td class="current">0</td>
+                <td>50+</td>
+                <td class="target">100+</td>
+            </tr>
+            <tr>
+                <td>Leads/month</td>
+                <td class="current">~5</td>
+                <td>10+</td>
+                <td class="target">20+</td>
+            </tr>
+            <tr>
+                <td>GBP visibility</td>
+                <td class="current">None</td>
+                <td>Top 3 local</td>
+                <td class="target">#1 local</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="next">
+        <p class="section-number">05 — NEXT STEPS</p>
+        <h2>What we need from you.</h2>
+
+        <div class="checklist">
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>Approve this proposal</strong> — any questions or changes?</p>
+            </div>
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>Choose pricing option</strong> — Standard ($2,500 setup) or Cash-Tight ($0 setup, 10% rev share)</p>
+            </div>
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>Provide Google account access</strong> — or we create one for the business</p>
+            </div>
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>Select 10-15 best job photos</strong> — we already have 52 to choose from</p>
+            </div>
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>List of 12 past customers</strong> — for review requests</p>
+            </div>
+            <div class="checklist-item">
+                <span class="check">☐</span>
+                <p><strong>Watson Roofing intro</strong> — to formalize referral partnership</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to fill your calendar?</h3>
+            <p>$2,500 to build. $700-900/mo to run. 4-5 jobs/month target.</p>
+            <p style="margin-bottom: 0;"><strong>First-year ROI: $48K additional revenue vs. $7,600 investment.</strong></p>
+            <a href="tel:+13252036946" class="cta-button">Call Brad: (325) 203-6946</a>
+            <p class="cta-phone">
+                <span>or email:</span>
+                <a href="mailto:brad@agegrowth.ai?subject=Hammerhead%20Concrete%20-%20Let's%20Build" style="color: var(--orange);">brad@agegrowth.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hammerhead Concrete × AGE — Growth Partner Proposal</p>
+        <p>Prepared March 17, 2026</p>
+    </footer>
+</body>
+</html>
