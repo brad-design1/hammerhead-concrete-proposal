@@ -1,23 +1,23 @@
 # Audio Intro Script — Hammerhead Concrete × AGE
 
-**Duration:** ~90 seconds  
+**Duration:** ~2 minutes  
 **Voice:** Brad Raschke (ElevenLabs custom voice)  
-**Tone:** Straight-talking, supportive, opportunity-focused
+**Tone:** Straight-talking, supportive, understanding
 
 ---
 
 Hey Dain, it's Brad.
 
-I've been looking at your situation, and here's what I see: you've got ten years of experience, twelve happy customers, zero complaints, and a reputation for being fair. The problem? Nobody knows about you. You're invisible to anyone searching "concrete contractor Brownwood."
+I've been thinking about what you told me — the ADHD, the five kids, trying to keep track of jobs and follow-ups while you're actually out there pouring concrete. Man, I get it. I'm the same way. High Quick Start, low Follow Through. Great at starting things, not so great at remembering to text that customer back.
 
-But here's the thing — your "fair pricing" approach isn't a weakness. It's your unfair advantage. Most concrete guys hide their pricing because they're overcharging. You don't have to hide anything. That's rare, and it's valuable.
+So here's what I want to do for you — two things, actually.
 
-So here's what I'm proposing: we build you a complete online presence in thirty days. Not just a website — a system. Google Business Profile, a mobile-first site, local SEO, and the hero feature: a transparent quote calculator that shows customers exactly what they're paying for. Every yard of concrete, every hour of labor, spelled out. No one else in Texas is doing this.
+First: a personal AI assistant. Not a chatbot — I'm talking about something you can voice text from your truck, or better yet, clip a little Plaud pin to your shirt that captures everything while you work. "Remind me to call the concrete supplier Monday." "Text Mrs. Johnson about the patio quote tomorrow." "Started the driveway at one-twenty-three Oak, should be done Thursday." It just... handles it. Follows up, tracks your jobs, manages your calendar. Like having a chief of staff in your pocket who never forgets anything.
 
-Here's the deal:
+Second: a transparent quote calculator on your website. You said you're not trying to screw people over — you're fair. So let's show that. Customers enter their project details and see an itemized breakdown, just like you do when you estimate a job. Every yard of concrete, every hour of labor, spelled out. No one else in Texas is doing this. It builds instant trust, and it turns your "fair pricing" thing into a real competitive advantage.
 
-Twenty-five hundred up front to build everything. Four hundred a month for ongoing optimization. Three to five hundred in ad spend. And if you hit more than four jobs a month, I get a hundred-dollar bonus per extra job. That's it.
+Here's the deal: twenty-five hundred up front to build everything. Four hundred a month for ongoing optimization and your assistant. Three to five hundred in ad spend. And if you hit more than four jobs a month, I get a hundred-dollar bonus per extra job. That's it.
 
-The math works like this: you're doing two to three jobs a month now. You want four to five. That gap is two to four thousand dollars a month you're leaving on the table. Close that gap, and this pays for itself in the first month.
+The math works: you're doing two to three jobs now, you want four to five. That gap is two to four grand a month you're leaving on the table. Close it, and this pays for itself immediately.
 
-Take a look through the page, see the timeline and the deliverables, and give me a call when you're ready to build.
+Take a look through the page, and give me a call when you're ready.
